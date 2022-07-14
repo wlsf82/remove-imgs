@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cy.handsOn('remove-imgs')</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      h1 {
+        color: darkslategrey
+      }
+      #imgs {
+        display: flex;
+      }
+      img {
+        padding: 8px;
+        border: 8px inset darkslategrey;
+      }
+      #img * {
+        flex-direction: row;
+      }
+      button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-left: 4px;
+        margin-right: 4px;
+        border-color: red;
+        color: red;
+        background-color: white;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Remove images</h1>
+    <div id="imgs">
+      <img src="./img1.png" alt="piece-of-a-big-sur-road">
+      <button id="btn-img-1">X</button>
+      <img src="./img2.png" alt="piece-of-a-big-sur-beach">
+      <button id="btn-img-2">X</button>
+    </div>
+    <script>
+      const btn1 = document.getElementById('btn-img-1')
+      const btn2 = document.getElementById('btn-img-2')
+      const emptySrc = './empty.png'
+      function removeImg1() {
+        document.querySelector('img[src="./img1.png"]').src=emptySrc
+        btn1.removeEventListener('click', removeImg1, false)
+      }
+      function removeImg2() {
+        document.querySelector('img[src="./img2.png"]').src=emptySrc
+        btn2.removeEventListener('click', removeImg2, false)
+      }
+      btn1.addEventListener('click', removeImg1, false)
+      btn2.addEventListener('click', removeImg2, false)
+    </script>
+  </body>
+</html>

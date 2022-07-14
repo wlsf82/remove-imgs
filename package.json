@@ -1,0 +1,20 @@
+{
+  "name": "remove-imgs",
+  "version": "1.0.0",
+  "description": "Sample project to demonstrate the usage of prev() and next() Cypress commands.",
+  "main": "src/index.html",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "Talking About Testing",
+    "Cypress.io",
+    "cy.handsOn('remove-imgs')"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.3.0"
+  }
+}
