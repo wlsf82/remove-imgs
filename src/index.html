@@ -42,6 +42,8 @@
       const btn1 = document.getElementById('btn-img-1')
       const btn2 = document.getElementById('btn-img-2')
       const emptySrc = './empty.png'
+      btn1.addEventListener('click', removeImg1, false)
+      btn2.addEventListener('click', removeImg2, false)
       function removeImg1() {
         document.querySelector('img[src="./img1.png"]').src=emptySrc
         btn1.removeEventListener('click', removeImg1, false)
@@ -50,8 +52,6 @@
         document.querySelector('img[src="./img2.png"]').src=emptySrc
         btn2.removeEventListener('click', removeImg2, false)
       }
-      btn1.addEventListener('click', removeImg1, false)
-      btn2.addEventListener('click', removeImg2, false)
     </script>
   </body>
 </html>
